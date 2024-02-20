@@ -1,0 +1,24 @@
+.myw {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    .right {
+        margin-left: 7rem;
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+        .i-in-p {
+            margin-right: 0.5rem;
+            color: #6366F1;
+        }
+        .i-in-btn {
+            margin-left: 1rem;
+
+        }
+        .LearnMore-btn {
+            margin-top: 2rem;
+        }
+    }
+}

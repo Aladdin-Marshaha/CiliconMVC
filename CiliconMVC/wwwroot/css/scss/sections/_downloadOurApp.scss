@@ -1,0 +1,30 @@
+.DownloadOurApp {
+    background-color: #F3F6FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .phone {
+        margin: 4rem 4rem;
+    }
+
+    .RightSection {
+
+        margin: 0rem 4rem;
+
+        .DownloadParent {            
+            .DownloadChiled  {
+                display: flex;
+                align-items: center;
+                margin-top: 3rem;
+
+                .stars {
+                    margin-top: -2rem;
+                }
+
+                .AppLink{
+                    margin-left: 4rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.showcase {
+    display: flex;
+    align-items: center;
+
+
+    .showcase-info{
+        align-items: center;
+
+        h2 {
+            font-size: xxx-large;
+            font-weight: 800;
+            margin-bottom: 3rem;
+        }
+        .p1 {
+            margin-bottom: 2rem;
+        }
+
+        .p2 {
+            margin-top: 4rem;
+            font-weight: 900;
+        }
+        .logos {
+            margin-top: 2rem;
+        }
+    }
+
+
+}

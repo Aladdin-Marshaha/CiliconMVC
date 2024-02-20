@@ -1,0 +1,27 @@
+header {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 2rem;
+
+        .left {
+            img {
+                margin-right: 2rem;
+            }
+            a {
+                margin-right: 1rem;
+                text-decoration: none;
+                color: black;
+            }
+
+        }
+
+        .right {
+            display: flex;
+            column-gap: 1.5rem;
+            align-items: center;
+
+        }
+    }
+}

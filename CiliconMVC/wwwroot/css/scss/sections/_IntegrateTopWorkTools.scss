@@ -1,0 +1,18 @@
+.IntegrateTopWorkTools {
+    padding: 4rem 4rem 4rem 4rem;
+
+    .title {
+        margin: 3rem 3rem 3rem 3rem;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .WorkTools {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 4rem;
+        img {
+            margin-bottom: 1rem;
+        }
+    }
+}

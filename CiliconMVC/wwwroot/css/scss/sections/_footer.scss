@@ -1,0 +1,16 @@
+footer {
+    text-align: center;
+
+    .socialmedia {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        column-gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    .footer-text {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+    
+}

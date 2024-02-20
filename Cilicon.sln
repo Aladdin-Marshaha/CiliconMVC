@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CiliconMVC", "CiliconMVC\CiliconMVC.csproj", "{B6DFF57A-EA30-4185-B37E-920AF01D7A4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6DFF57A-EA30-4185-B37E-920AF01D7A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6DFF57A-EA30-4185-B37E-920AF01D7A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6DFF57A-EA30-4185-B37E-920AF01D7A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6DFF57A-EA30-4185-B37E-920AF01D7A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F2DE281-73D0-42AE-9DD4-BABB99828F98}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+.ourTool {
+    background-color: #F3F6FF;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    p {
+        margin-bottom: 4rem;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .chiled {
+
+            text-decoration: none;
+            color: black;
+            text-align: center;
+            align-items: center;
+            padding: 2rem;
+
+            img {
+                margin-bottom: 1.5rem;
+            }
+
+            &:hover {
+                background-color: white;
+            }
+        }
+    }
+}
