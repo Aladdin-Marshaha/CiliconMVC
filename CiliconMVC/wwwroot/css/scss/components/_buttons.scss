@@ -73,13 +73,13 @@
 
 
 
-.btn-theme{
-  @include button;
+.btn-theme {
+    @include button;
     color: white;
-
     background-color: $theme;
+
     i {
-      margin-right: 1rem;
+        margin-right: 1rem;
     }
 }
 
@@ -92,6 +92,3 @@
     margin-right: 1rem;
   }
 }
-
-
-
