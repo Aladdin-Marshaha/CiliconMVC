@@ -1,0 +1,109 @@
+$lighter-black: #808080;
+
+.signUp {
+    display: flex;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    .container {
+        width: 50%;
+        max-width: 60%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+        form {
+            .content {
+                gap: 1rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "firstname lastName" "email email" "password password" "confirm confirm" "terms terms";
+
+                #form-firstName {
+                    grid-area: firstname;
+                }
+
+                #form-lastName {
+                    grid-area: lastName;
+                }
+
+                #form-email {
+                    grid-area: email;
+                }
+
+                #form-password {
+                    grid-area: password;
+                }
+
+                #form-confirm {
+                    grid-area: confirm;
+                }
+
+                #form-terms {
+                    grid-area: terms;
+                }
+
+                .input-group {
+                    display: grid;
+                    grid-template-columns: 1fr;
+
+                    label {
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+
+                    input {
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid $lighter-black;
+                        border-radius: 3px;
+                        transition: border-color 0.3s ease;
+
+                        &:focus {
+                            outline: none;
+                            border-color: dodgerblue;
+                        }
+
+                        &.input-validation-error {
+                            border: 0.063rem solid $danger;
+                            color: red;
+
+                            &::placeholder {
+                                color: $danger;
+                            }
+                        }
+                    }
+
+                    span {
+                        color: red;
+                    }
+                }
+
+                .checkbox-group {
+                    margin-bottom: 20px;
+
+
+                    input[type="checkbox"] {
+                        margin-right: 10px;
+                    }
+
+                    label {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+
+                    span {
+                        color: red;
+                    }
+                }
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

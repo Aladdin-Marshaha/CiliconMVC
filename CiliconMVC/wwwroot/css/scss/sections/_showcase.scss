@@ -3,26 +3,27 @@
     align-items: center;
 
 
-    .showcase-info{
+    .showcase-info {
         align-items: center;
 
         h2 {
             font-size: xxx-large;
-            font-weight: 800;
+            font-weight: 700;
             margin-bottom: 3rem;
         }
+
         .p1 {
             margin-bottom: 2rem;
         }
 
         .p2 {
             margin-top: 4rem;
-            font-weight: 900;
+            font-weight: 700;
         }
+
         .logos {
             margin-top: 2rem;
+            margin-right: 1rem;
         }
     }
-
-
 }
