@@ -1,5 +1,4 @@
 header {
-
     .container {
         display: flex;
         justify-content: space-between;
@@ -7,6 +6,9 @@ header {
         margin-top: 2rem;
 
         .left {
+            display: flex;
+            align-items: center;
+
             img {
                 margin-right: 2rem;
             }
@@ -15,6 +17,11 @@ header {
                 margin-right: 1rem;
                 text-decoration: none;
                 color: black;
+                font-weight: 600;
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
 
