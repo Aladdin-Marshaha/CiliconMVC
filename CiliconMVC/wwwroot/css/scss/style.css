@@ -297,7 +297,7 @@ footer .footer-text {
   max-width: 60%;
   background-color: white;
   border-radius: 5px;
-  padding: 20px;
+  padding: 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .signUp .container form .content {
@@ -368,4 +368,69 @@ footer .footer-text {
 }
 .signUp .container form button {
   width: 100%;
+}
+
+#signin {
+  height: 100%;
+}
+#signin .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#signin .container form {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+#signin .container form .content {
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas: "email" "password" "remember" "button" "forgot";
+}
+#signin .container form .content .input-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.2rem;
+}
+#signin .container form .content .input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #808080;
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+}
+#signin .container form .content .input-group input:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
+#signin .container form .content .input-group input.input-validation-error {
+  border: 0.063rem solid #EF4444;
+  color: red;
+}
+#signin .container form .content .input-group input.input-validation-error::placeholder {
+  color: #EF4444;
+}
+#signin .container form .content #form-email {
+  grid-area: email;
+}
+#signin .container form .content #form-password {
+  grid-area: password;
+}
+#signin .container form .content #form-remember {
+  grid-area: remember;
+}
+#signin .container form #form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  grid-area: button;
+}
+#signin .container form #form-forgot-password {
+  margin: 1rem 0 0 0;
+  grid-area: forgot;
+  text-align: center;
 }
