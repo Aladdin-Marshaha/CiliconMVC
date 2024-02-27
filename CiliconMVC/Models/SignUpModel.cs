@@ -13,7 +13,7 @@ public class SignUpModel
     [Required(ErrorMessage = "Invalid first name")]
     public string LastName { get; set; } = null!;
 
-    [Display(Name = "Email address", Prompt = "Enter your Email address name", Order = 2)]
+    [Display(Name = "Email address", Prompt = "Enter your Email address", Order = 2)]
     [DataType(DataType.EmailAddress)]
     [Required(ErrorMessage = "Email address is required")]
     [RegularExpression(@"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$", ErrorMessage = "Invalid email address")]

@@ -1,0 +1,79 @@
+#signin {
+    height: 100%;
+
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        form {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+
+
+            .content {
+                display: grid;
+                gap: 1rem 1rem;
+                grid-template-columns: 1fr;
+                grid-template-areas: "email" "password" "remember" "button" "forgot";
+
+                .input-group {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 0.2rem;
+
+                    input {
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid $lighter-black;
+                        border-radius: 3px;
+                        transition: border-color 0.3s ease;
+
+                        &:focus {
+                            outline: none;
+                            border-color: dodgerblue;
+                        }
+
+                        &.input-validation-error {
+                            border: 0.063rem solid $danger;
+                            color: red;
+
+                            &::placeholder {
+                                color: $danger;
+                            }
+                        }
+                    }
+                }
+
+                #form-email {
+                    grid-area: email;
+                }
+
+                #form-password {
+                    grid-area: password;
+                }
+
+                #form-remember {
+                    grid-area: remember;
+                }
+            }
+
+            #form-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                grid-area: button;
+            }
+
+            #form-forgot-password {
+                margin: 1rem 0 0 0;
+                grid-area: forgot;
+                text-align: center;
+            }
+        }
+    }
+}
