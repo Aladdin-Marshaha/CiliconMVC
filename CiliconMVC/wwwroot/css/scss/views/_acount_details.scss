@@ -1,0 +1,157 @@
+.account-detailss {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #account-details {
+        margin-top: 5rem;
+        display: flex;
+
+        aside {
+            text-align: center;
+
+            nav {
+                display: grid;
+                gap: 0.5rem;
+            }
+        }
+
+        .details {
+            margin-left: 4rem;
+
+            .basic-info {
+                form {
+
+                    .content {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-areas: "firstName lastName" "email phone" "bio bio";
+                        gap: 1rem;
+
+                        .form-buttons {
+                            button {
+                                margin-right: 1rem;
+                            }
+                        }
+                    }
+
+                    #form-firstName {
+                        grid-area: firstName;
+                    }
+
+                    #form-lastName {
+                        grid-area: lastName;
+                    }
+
+                    #form-email {
+                        grid-area: email;
+                    }
+
+                    #form-phone {
+                        grid-area: phone;
+                    }
+
+                    #form-bio {
+                        grid-area: bio;
+                    }
+
+
+
+
+                    .input-group {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 0.2rem;
+
+                        input {
+                            width: 100%;
+                            padding: 10px;
+                            border: 1px solid;
+                            border-radius: 3px;
+                            transition: border-color 0.3s ease;
+
+                            &:focus {
+                                outline: none;
+                                border-color: dodgerblue;
+                            }
+
+                            &.input-validation-error {
+                                border: 0.063rem solid #EF4444;
+                                color: red;
+
+                                &::placeholder {
+                                    color: #EF4444;
+                                }
+                            }
+                        }
+
+                        textarea {
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .address-info {
+            form {
+                .content {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "addressLine1 addressLine1" "addressLine2 addressLine2" "postalCode city";
+                    gap: 1rem;
+
+                    #form-addressLine1 {
+                        grid-area: addressLine1;
+                    }
+
+                    #form-addressLine2 {
+                        grid-area: addressLine2;
+                    }
+
+                    #form-postalCode {
+                        grid-area: postalCode;
+                    }
+
+                    #form-city {
+                        grid-area: city;
+                    }
+
+                    .input-group {
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        gap: 0.2rem;
+
+                        input {
+                            width: 100%;
+                            padding: 10px;
+                            border: 1px solid;
+                            border-radius: 3px;
+                            transition: border-color 0.3s ease;
+
+                            &:focus {
+                                outline: none;
+                                border-color: dodgerblue;
+                            }
+
+                            &.input-validation-error {
+                                border: 0.063rem solid #EF4444;
+                                color: red;
+
+                                &::placeholder {
+                                    color: #EF4444;
+                                }
+                            }
+                        }
+                    }
+
+                    .form-buttons {
+                        button {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

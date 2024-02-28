@@ -4,6 +4,10 @@
   grid-template-rows: auto 1fr auto;
 }
 
+.theme-color {
+  color: #6366F1;
+}
+
 .mt {
   font-size: x-large;
   font-weight: 700;
@@ -433,4 +437,118 @@ footer .footer-text {
   margin: 1rem 0 0 0;
   grid-area: forgot;
   text-align: center;
+}
+
+.account-detailss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.account-detailss #account-details {
+  margin-top: 5rem;
+  display: flex;
+}
+.account-detailss #account-details aside {
+  text-align: center;
+}
+.account-detailss #account-details aside nav {
+  display: grid;
+  gap: 0.5rem;
+}
+.account-detailss #account-details .details {
+  margin-left: 4rem;
+}
+.account-detailss #account-details .details .basic-info form .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "firstName lastName" "email phone" "bio bio";
+  gap: 1rem;
+}
+.account-detailss #account-details .details .basic-info form .content .form-buttons button {
+  margin-right: 1rem;
+}
+.account-detailss #account-details .details .basic-info form #form-firstName {
+  grid-area: firstName;
+}
+.account-detailss #account-details .details .basic-info form #form-lastName {
+  grid-area: lastName;
+}
+.account-detailss #account-details .details .basic-info form #form-email {
+  grid-area: email;
+}
+.account-detailss #account-details .details .basic-info form #form-phone {
+  grid-area: phone;
+}
+.account-detailss #account-details .details .basic-info form #form-bio {
+  grid-area: bio;
+}
+.account-detailss #account-details .details .basic-info form .input-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.2rem;
+}
+.account-detailss #account-details .details .basic-info form .input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+}
+.account-detailss #account-details .details .basic-info form .input-group input:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
+.account-detailss #account-details .details .basic-info form .input-group input.input-validation-error {
+  border: 0.063rem solid #EF4444;
+  color: red;
+}
+.account-detailss #account-details .details .basic-info form .input-group input.input-validation-error::placeholder {
+  color: #EF4444;
+}
+.account-detailss #account-details .details .basic-info form .input-group textarea {
+  padding: 10px;
+}
+.account-detailss #account-details .address-info form .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "addressLine1 addressLine1" "addressLine2 addressLine2" "postalCode city";
+  gap: 1rem;
+}
+.account-detailss #account-details .address-info form .content #form-addressLine1 {
+  grid-area: addressLine1;
+}
+.account-detailss #account-details .address-info form .content #form-addressLine2 {
+  grid-area: addressLine2;
+}
+.account-detailss #account-details .address-info form .content #form-postalCode {
+  grid-area: postalCode;
+}
+.account-detailss #account-details .address-info form .content #form-city {
+  grid-area: city;
+}
+.account-detailss #account-details .address-info form .content .input-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.2rem;
+}
+.account-detailss #account-details .address-info form .content .input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+}
+.account-detailss #account-details .address-info form .content .input-group input:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
+.account-detailss #account-details .address-info form .content .input-group input.input-validation-error {
+  border: 0.063rem solid #EF4444;
+  color: red;
+}
+.account-detailss #account-details .address-info form .content .input-group input.input-validation-error::placeholder {
+  color: #EF4444;
+}
+.account-detailss #account-details .address-info form .content .form-buttons button {
+  margin-right: 1rem;
 }
