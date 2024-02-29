@@ -1,0 +1,30 @@
+﻿@model ContactUsViewModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<section id="contact" class="container">
+    <form method="post" asp-controller="Contact" asp-action="Contact" novalidate>
+        <h2 class="lt">Get In Contact With Us</h2>
+        <div id="form-fullName" class="input-group">
+            <label asp-for="ContactUs.FullName"></label>
+            <span asp-validation-for="ContactUs.FullName"></span>
+            <input asp-for="ContactUs.FullName" />
+        </div>
+        <div id="form-email" class="input-group">
+            <label asp-for="ContactUs.Email"></label>
+            <span asp-validation-for="ContactUs.Email"></span>
+            <input asp-for="ContactUs.Email" />
+        </div>
+        <div id="form-service" class="input-group">
+            <label asp-for="ContactUs.Service"></label>
+            <select asp-for="ContactUs.Service"> </select>
+        </div>
+        <div id="form-message" class="input-group">
+            <label asp-for="ContactUs.Message"></label>
+            <span asp-validation-for="ContactUs.Message"></span>
+            <textarea asp-for="ContactUs.Message"></textarea>
+        </div>
+        <button type="submit" class="btn-theme">Send Contact Request</button>
+    </form>
+</section>

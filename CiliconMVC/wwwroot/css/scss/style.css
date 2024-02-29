@@ -552,3 +552,36 @@ footer .footer-text {
 .account-detailss #account-details .address-info form .content .form-buttons button {
   margin-right: 1rem;
 }
+
+#contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+#contact form .input-group {
+  display: grid;
+  row-gap: 0.2rem;
+}
+#contact form .input-group span {
+  color: #EF4444;
+}
+#contact form .input-group label {
+  font-weight: 500;
+  margin-top: 1rem;
+}
+#contact form .input-group input, #contact form .input-group select, #contact form .input-group textarea {
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+  border: solid 1px #D4D7E5;
+}
+#contact form .input-group input.input-validation-error, #contact form .input-group select.input-validation-error, #contact form .input-group textarea.input-validation-error {
+  border: 0.063rem solid #EF4444;
+  color: #EF4444;
+}
+#contact form .input-group input.input-validation-error::placeholder, #contact form .input-group select.input-validation-error::placeholder, #contact form .input-group textarea.input-validation-error::placeholder {
+  color: #EF4444;
+}
+#contact form button {
+  margin-top: 2rem;
+}
