@@ -1,11 +1,11 @@
-﻿using CiliconMVC.Helpers;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using Infrastructure.Helpers;
 
-namespace CiliconMVC.Models;
+namespace Infrastructure.Models;
 
 public class SignUpModel
 {
-    [Display (Name = "First name", Prompt = "Enter your first name", Order = 0 )]
+    [Display(Name = "First name", Prompt = "Enter your first name", Order = 0)]
     [Required(ErrorMessage = "Invalid first name")]
     [DataType(DataType.Text)]
     public string FirstName { get; set; } = null!;
@@ -30,7 +30,7 @@ public class SignUpModel
     [Display(Name = "Confirm Password", Prompt = "Confirm your Password", Order = 4)]
     [DataType(DataType.Password)]
     [Required(ErrorMessage = "Password must be confirmed")]
-    [Compare(nameof(Password) , ErrorMessage = "Password dose not match")]
+    [Compare(nameof(Password), ErrorMessage = "Password dose not match")]
     public string ConfirmPassword { get; set; } = null!;
 
     [Display(Name = "I agree to the Terms & Conditions.", Order = 5)]

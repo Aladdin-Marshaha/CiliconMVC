@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CiliconMVC.Models;
+namespace Infrastructure.Models;
 
 public class SignInModel
 {

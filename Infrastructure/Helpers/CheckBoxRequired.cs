@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-namespace CiliconMVC.Helpers;
+namespace Infrastructure.Helpers;
 
 public class CheckBoxRequired : ValidationAttribute
 {
