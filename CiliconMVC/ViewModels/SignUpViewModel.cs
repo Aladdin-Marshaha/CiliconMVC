@@ -1,4 +1,4 @@
-﻿using CiliconMVC.Models;
+﻿using Infrastructure.Models;
 
 namespace CiliconMVC.ViewModels;
 

@@ -23,7 +23,7 @@
                     <a asp-controller="Home" asp-action="Index"><img src="/images/Silicon Logotype - Light Mode.svg" alt=""> </a>
                     <a asp-controller="Home" asp-action="Index" asp-fragment="showcase">Overview</a>
                     <a asp-controller="Home" asp-action="Index" asp-fragment="features">Features</a>
-                    <a href="http://">Contact</a>
+                    <a asp-controller="contact" asp-action="contact">Contact</a>
                 </div>
 
                 <div class="right">
@@ -68,5 +68,6 @@
 
         <p class="footer-text">&copy; @DateTime.Now.Year Silicon. All rights reserved. Pulvinar urna condimentum amet tempor, ornare integer. Lorem odio justo malesuada suspendisse viverra aliquet quisque turpis non. Feugiat in odio non nunc ornare consectetur.</p>
     </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>

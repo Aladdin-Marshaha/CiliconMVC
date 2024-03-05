@@ -14,4 +14,4 @@ public class AccountDetailsViewModel
     };
     public AccountDetailsAddressInfoModel AddressInfo { get; set; } = new AccountDetailsAddressInfoModel();
 }
- 
+  
