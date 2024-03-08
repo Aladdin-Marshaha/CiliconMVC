@@ -13,16 +13,16 @@ public class AuthController : Controller
         _userService = userService;
     }
 
-    [Route("/signup")]
     [HttpGet]
+    [Route("/signup")]
     public IActionResult SignUp()
     {
         var viewModel = new SignUpViewModel();
         return View(viewModel);
     }
 
-    [Route("/signup")]
     [HttpPost]
+    [Route("/signup")]
     public async Task<IActionResult> SignUp(SignUpViewModel viewModel)
     {
         if (ModelState.IsValid)
@@ -36,24 +36,24 @@ public class AuthController : Controller
     }
 
 
-    [Route("/signin")]
     [HttpGet]
+    [Route("/signin")]
     public IActionResult SignIn()
     {
         var viewModel = new SignInViewModel();
         return View(viewModel);
     }
-
-    [Route("/signin")]
+     
     [HttpPost]
-    public IActionResult SignIn(SignInViewModel viewModel)
+    [Route("/signin")]
+    public async Task<IActionResult> SignIn(SignInViewModel viewModel)
     {
-        if (!ModelState.IsValid)
-            return View(viewModel);
-
-        //var result = _authService.SignIn(viewModel.Form);
-        //if (result)
-        //    return RedirectToAction("Account", "Index");
+        if (ModelState.IsValid)
+        {
+            var result = await _userService.SignInUserAsync(viewModel.Form);
+            if (result.StatusCode == Infrastructure.Models.StatusCode.Ok)
+                return RedirectToAction("Details" , "Account");
+        }
              
         viewModel.ErrorMessage = "Incorrect email or password";
             return View(viewModel);

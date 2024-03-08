@@ -359,9 +359,13 @@ footer .footer-text {
 }
 .signUp .container form .content .checkbox-group {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 .signUp .container form .content .checkbox-group input[type=checkbox] {
   margin-right: 10px;
+  height: 20px;
+  width: 20px;
 }
 .signUp .container form .content .checkbox-group label {
   display: inline-block;

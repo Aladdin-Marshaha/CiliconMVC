@@ -3,6 +3,7 @@ using Infrastructure.Factories;
 using Infrastructure.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Diagnostics;
 using System.Linq.Expressions;
 
 namespace Infrastructure.Repositories;
@@ -24,8 +25,9 @@ public abstract class Repo<TEntity> where TEntity : class
             await _context.SaveChangesAsync();
             return ResponseFactory.Ok(entity);
         }
-        catch (Exception ex)
+        catch (Exception ex) 
         {
+            Debug.WriteLine(ex);
             return ResponseFactory.Error(ex.Message);
         }
     }
