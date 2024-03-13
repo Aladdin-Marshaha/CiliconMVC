@@ -1,17 +1,13 @@
 ﻿using CiliconMVC.Models;
+using Infrastructure.Entities;
 
 namespace CiliconMVC.ViewModels;
 
 public class AccountDetailsViewModel
 {
     public string Title { get; set; } = "Account Details";
-    public AccountDetailsBasicInfoModel BasicInfo { get; set; } = new AccountDetailsBasicInfoModel()
-    {
-        FirstName = "Aladdin",
-        LastName = "Marshaha",
-        Email = "aladdin@gmail.com",
-        ProfileImage = "images/profile-imge.svg"
-    };
-    public AccountDetailsAddressInfoModel AddressInfo { get; set; } = new AccountDetailsAddressInfoModel();
+    public AccountDetailsBasicInfoModel BasicInfo { get; set; } = null!;
+    public AccountDetailsAddressInfoModel AddressInfo { get; set; } = null!;
+    public UserEntity User { get; internal set; }
 }
   

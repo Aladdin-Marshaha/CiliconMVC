@@ -2,14 +2,14 @@
 
 namespace CiliconMVC.Controllers
 {
-    public class HomeController : Controller
+    public class DefaultController : Controller
     {
 
-        [Route("/")]
-        public IActionResult Index()
+        [Route("/error")]
+        public IActionResult Error404(int statusCode)
         {
             return View();
         }
     }
-
 }
+
