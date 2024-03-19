@@ -1,13 +1,14 @@
 ﻿using CiliconMVC.Models;
 using Infrastructure.Entities;
+using System.Runtime;
 
 namespace CiliconMVC.ViewModels;
 
 public class AccountDetailsViewModel
 {
-    public string Title { get; set; } = "Account Details";
-    public AccountDetailsBasicInfoModel BasicInfo { get; set; } = null!;
-    public AccountDetailsAddressInfoModel AddressInfo { get; set; } = null!;
-    public UserEntity User { get; internal set; }
+    public ProfileInfoViewModel? ProfileInfo { get; set; } = null!;
+    public AccountDetailsBasicInfoModel? BasicInfo { get; set; } = null!;
+    public AccountDetailsAddressInfoModel? AddressInfo { get; set; } = null!;
+
 }
-  
+

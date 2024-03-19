@@ -89,7 +89,7 @@ input:checked + .slider:before {
         color: black;
         font-weight: 600;
         transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        background-color: $gray-200
+        background-color: #D946EF;
     }
 }
 
@@ -108,6 +108,6 @@ input:checked + .slider:before {
         color: white;
         font-weight: 600;
         transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        background-color: $theme;
+        background-color: $gray-700;
     }
 }

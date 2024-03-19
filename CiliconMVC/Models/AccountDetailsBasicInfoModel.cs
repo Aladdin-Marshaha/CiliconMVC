@@ -4,6 +4,10 @@ namespace CiliconMVC.Models;
 
 public class AccountDetailsBasicInfoModel
 {
+    public string UserId { get; set; } = null!;
+
+
+
     [DataType(DataType.ImageUrl)]
     public string? ProfileImage { get; set; }
 
@@ -31,8 +35,7 @@ public class AccountDetailsBasicInfoModel
 
     [Display(Name = "Phone", Prompt = "Enter your phone", Order = 3)]
     [DataType(DataType.PhoneNumber)]
-    [Required(ErrorMessage = "Phone is required")]
-    public string Phone { get; set; } = null!;
+    public string? Phone { get; set; }
 
 
 

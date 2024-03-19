@@ -108,7 +108,7 @@ input:checked + .slider:before {
   color: black;
   font-weight: 600;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  background-color: #EFF2FC;
+  background-color: #D946EF;
 }
 
 .btn-gray {
@@ -128,7 +128,7 @@ input:checked + .slider:before {
   color: white;
   font-weight: 600;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  background-color: #6366F1;
+  background-color: #565973;
 }
 
 a {
@@ -390,15 +390,18 @@ footer .footer-text {
 
 #signin {
   height: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 #signin .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  width: 50%;
+  max-width: 60%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 #signin .container form {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 2rem;
 }
 #signin .container form .content {

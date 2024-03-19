@@ -11,7 +11,6 @@ public class AccountDetailsAddressInfoModel
 
 
     [Display(Name = "Address line 2", Prompt = "Enter your second address line", Order = 1)]
-    [Required(ErrorMessage = "Enter your address")]
     public string? AddressLine_2 { get; set; }
 
 

@@ -1,15 +1,18 @@
 #signin {
     height: 100%;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 
 
     .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+        width: 50%;
+        max-width: 60%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
         form {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 2rem;
 
 

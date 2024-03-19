@@ -1,6 +1,8 @@
 using Infrastructure.Contexts;
 using Infrastructure.Entities;
 using Infrastructure.Helpers.Meddlewares;
+using Infrastructure.Services;
+
 
 
 //using Infrastructure.Repositories;
@@ -33,6 +35,7 @@ builder.Services.ConfigureApplicationCookie(x =>
 
 });
 
+builder.Services.AddScoped<AddressService>();
 
 var app = builder.Build();
 app.UseHsts();
