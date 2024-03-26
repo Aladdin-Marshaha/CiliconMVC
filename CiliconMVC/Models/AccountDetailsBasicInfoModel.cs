@@ -42,5 +42,7 @@ public class AccountDetailsBasicInfoModel
     [Display(Name = "Bio", Prompt = "Add a short bio...", Order = 4)]
     [DataType(DataType.MultilineText)]
     public string? Biography { get; set; }
+
+    public bool IsExternalAccount { get; set; }
 }
   

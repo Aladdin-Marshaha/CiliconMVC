@@ -15,5 +15,5 @@ public class UserEntity : IdentityUser
     public string? Bio {  get; set; }
 
     public ICollection<AddressEntity> addresses { get; set; } = [];
+    public bool IsExternalAccount { get; set; } = false;
 }
-

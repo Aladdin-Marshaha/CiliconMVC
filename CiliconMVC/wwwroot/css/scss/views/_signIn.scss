@@ -77,6 +77,18 @@
                 grid-area: forgot;
                 text-align: center;
             }
+
+            .external-providers {
+                display: grid;
+                justify-content: center;
+                gap: 1rem;
+
+                .providers {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                }
+            }
         }
     }
 }

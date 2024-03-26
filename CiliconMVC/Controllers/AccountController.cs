@@ -171,24 +171,29 @@ public class AccountController : Controller
             LastName = user.LastName,
             Email = user.Email!,
             Phone = user.PhoneNumber,
-            Biography = user.Bio
+            Biography = user.Bio,
+            IsExternalAccount = user.IsExternalAccount,
         };
 
     }
 
     private async Task<AccountDetailsAddressInfoModel> PopulateAddressInfoAsync()
     {
+        
         var user = await _userManager.GetUserAsync(User);
         if (user != null)
         {
             var address = await _addressService.GetAddressAsync(user.Id);
-            return new AccountDetailsAddressInfoModel
+            if (address != null)
             {
-                AddressLine_1 = address.AddressLine_1,
-                AddressLine_2 = address.AddressLine_2,
-                PostalCode = address.PostalCode,
-                City = address.City,
-            };
+                return new AccountDetailsAddressInfoModel
+                {
+                    AddressLine_1 = address.AddressLine_1,
+                    AddressLine_2 = address.AddressLine_2,
+                    PostalCode = address.PostalCode,
+                    City = address.City,
+                };
+            }
         }
 
         return new AccountDetailsAddressInfoModel();

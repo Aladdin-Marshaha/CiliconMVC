@@ -455,6 +455,16 @@ footer .footer-text {
   grid-area: forgot;
   text-align: center;
 }
+#signin .container form .external-providers {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+}
+#signin .container form .external-providers .providers {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
 
 .account-detailss {
   display: flex;

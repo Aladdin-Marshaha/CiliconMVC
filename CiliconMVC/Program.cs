@@ -20,7 +20,6 @@ builder.Services.AddDefaultIdentity<UserEntity>(x =>
     x.SignIn.RequireConfirmedEmail = false;
     x.Password.RequiredLength = 8;
 }).AddEntityFrameworkStores<DataContext>();
-
 builder.Services.ConfigureApplicationCookie(x =>
 {
     x.Cookie.HttpOnly = true;
@@ -35,6 +34,17 @@ builder.Services.ConfigureApplicationCookie(x =>
 
 });
 
+builder.Services.AddAuthentication().AddFacebook(x =>
+{
+    x.AppId = "939969131038062";
+    x.AppSecret = "0e605949b47ccd6664f57400f83c08a0";
+    x.Fields.Add("first_name");
+    x.Fields.Add("last_name");
+});
+
+
+
+
 builder.Services.AddScoped<AddressService>();
 
 var app = builder.Build();
@@ -43,7 +53,7 @@ app.UseStatusCodePagesWithReExecute("/error", "?statusCode={0}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
-
+app.UseAuthentication();
 
 app.UseAuthorization();
 app.UseUserSessionValidation();
@@ -53,3 +63,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
+// | 
+
