@@ -612,3 +612,11 @@ footer .footer-text {
 #contact form button {
   margin-top: 2rem;
 }
+
+.courses .courseParent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.courses .courseParent .courseChiled {
+  display: block;
+}

@@ -84,21 +84,27 @@ public class AuthController : Controller
     [Route("/signin")]
     public async Task<IActionResult> SignIn(SignInViewModel viewModel, string returnUrl)
     {
-        if (ModelState.IsValid)
+        try
         {
-            var result = await _signInManager.PasswordSignInAsync(viewModel.Email, viewModel.Password, viewModel.RememberMe, false);
-            if (result.Succeeded)
+            if (ModelState.IsValid)
             {
-                if(!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
-                    return Redirect(returnUrl);
+                var result = await _signInManager.PasswordSignInAsync(viewModel.Email, viewModel.Password, viewModel.RememberMe, false);
+                if (result.Succeeded)
+                {
+                    if(!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                        return Redirect(returnUrl);
 
-                return RedirectToAction("Details", "Account"); 
+                    return RedirectToAction("Details", "Account"); 
+                }
             }
         }
+        catch
+        {
 
-        ModelState.AddModelError("IncorrectValues", "Incorrect email or password");
-        ViewData["ErrorMessage"] = "Incorrect email or password";
-        return View(viewModel);
+        }
+            ModelState.AddModelError("IncorrectValues", "Incorrect email or password");
+            ViewData["ErrorMessage"] = "Incorrect email or password";
+            return View(viewModel);
     }
 
     #endregion

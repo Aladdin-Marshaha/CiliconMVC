@@ -1,0 +1,35 @@
+﻿@using Infrastructure.Models
+@model IEnumerable<CourseEntity>
+
+@{
+    ViewData["Title"] = "Courses";
+}
+
+
+<section class="container courses">
+
+    <a asp-action="CourseRegisterForm" asp-controller="Courses"> Create new course</a>
+
+    <br />
+    <hr />
+    <br />
+
+        <div class="courseParent">
+            @foreach (var course in Model)
+             {
+                <div class="courseChiled">
+                    <h2>@course.Title</h2>
+                    <div>@course.Author</div>
+                    <div>
+                        <div>@course.Price</div>
+                        <div>@course.DiscountPrice</div>
+                    </div>
+                    <div>
+                        <div>@course.Hours</div>
+                        <div>@course.LikesInProcent</div>
+                        <div>@course.LikesInNumbers</div>
+                    </div>
+                </div>
+             }
+        </div>
+</section>

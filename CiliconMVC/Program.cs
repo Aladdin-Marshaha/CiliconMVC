@@ -4,9 +4,6 @@ using Infrastructure.Helpers.Meddlewares;
 using Infrastructure.Services;
 
 
-
-//using Infrastructure.Repositories;
-//using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -57,7 +54,7 @@ app.UseAuthentication();
 
 app.UseAuthorization();
 app.UseUserSessionValidation();
-app.UseAuthorization();
+//app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
