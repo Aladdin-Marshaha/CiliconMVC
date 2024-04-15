@@ -102,6 +102,7 @@ public class AuthController : Controller
         {
 
         }
+            ViewData["ReturnUrl"] = returnUrl;
             ModelState.AddModelError("IncorrectValues", "Incorrect email or password");
             ViewData["ErrorMessage"] = "Incorrect email or password";
             return View(viewModel);

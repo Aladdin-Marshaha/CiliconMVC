@@ -53,7 +53,7 @@ namespace Infrastructure.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Addresses");
+                    b.ToTable("Addresses", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.CourseEntity", b =>
@@ -91,7 +91,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Courses");
+                    b.ToTable("Courses", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.SubscriberEntity", b =>
@@ -108,7 +108,7 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Subscribers");
+                    b.ToTable("Subscribers", (string)null);
                 });
 
             modelBuilder.Entity("Infrastructure.Entities.UserEntity", b =>

@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Contexts;
+using Infrastructure.Dtos;
 using Infrastructure.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,36 +9,26 @@ namespace EndpointsOchDTOModels.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class SubscribersController : ControllerBase
+public class SubscribersController(DataContext context) : ControllerBase
 {
-    private readonly DataContext _context;
-    public SubscribersController(DataContext context)
-    {
-        _context = context;
-    }
+    private readonly DataContext _context = context;
 
     #region CREATE
     [HttpPost]
-    public async Task <IActionResult> Create(string email)
+    public async Task<IActionResult> Create(Subscriber dto)
     {
-        if (!string.IsNullOrEmpty(email))
+        if (ModelState.IsValid)
         {
-            if (!await _context.Subscribers.AnyAsync(x => x.Email == email))
+            if (!await _context.Subscribers.AnyAsync(x => x.Email == dto.Email))
             {
-                try
-                {
-                    var subscriberEntity = new SubscriberEntity { Email = email };
-                    _context.Subscribers.Add(subscriberEntity);
-                    await _context.SaveChangesAsync();
-
-                    return Created("", null);
-                }
-                catch
-                {
-                    return Problem("Unable to create subsctiption");
-                }
+                _context.Subscribers.Add(dto);
+                await _context.SaveChangesAsync();
+                return Created("", null);
             }
-            return Conflict("Your email address is already subscribed.");
+            else
+            {
+                return Conflict();
+            }
         }
         return BadRequest();
     }
@@ -60,9 +51,9 @@ public class SubscribersController : ControllerBase
 
     #region GET ONE
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetOne(int id)
+    public async Task<IActionResult> GetOne(string email)
     {
-        var subscriber = await _context.Subscribers.FirstOrDefaultAsync(x => x.Id == id);
+        var subscriber = await _context.Subscribers.FirstOrDefaultAsync(x => x.Email == email);
         if (subscriber != null)
         {
             return Ok(subscriber);
@@ -76,12 +67,12 @@ public class SubscribersController : ControllerBase
     #region UPDATE
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateOne(int id, string email)
+    public async Task<IActionResult> UpdateOne(string email)
     {
-        var subscriber = await _context.Subscribers.FirstOrDefaultAsync(x => x.Id == id);
+        var subscriber = await _context.Subscribers.FirstOrDefaultAsync(x => x.Email == email);
         if (subscriber != null)
         {
-            subscriber.Email = email;   
+            subscriber.Email = email;
             _context.Subscribers.Update(subscriber);
             await _context.SaveChangesAsync();
 
@@ -96,9 +87,9 @@ public class SubscribersController : ControllerBase
     #region DELETE
 
     [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteOne(int id)
+    public async Task<IActionResult> DeleteOne(string email)
     {
-        var subscriber = await _context.Subscribers.FirstOrDefaultAsync(x => x.Id == id);
+        var subscriber = await _context.Subscribers.FirstOrDefaultAsync(x => x.Email == email);
         if (subscriber != null)
         {
             _context.Subscribers.Remove(subscriber);
