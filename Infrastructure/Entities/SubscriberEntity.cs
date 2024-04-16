@@ -5,7 +5,7 @@ namespace Infrastructure.Entities;
 
 public class SubscriberEntity
 {
-    public string Id { get; set; } = Guid.NewGuid().ToString();
+    public int Id { get; set; }
 
     [Required]
     public string Email { get; set; } = null!;

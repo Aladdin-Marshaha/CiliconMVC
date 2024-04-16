@@ -2,8 +2,6 @@ using Infrastructure.Contexts;
 using Infrastructure.Entities;
 using Infrastructure.Helpers.Meddlewares;
 using Infrastructure.Services;
-
-
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

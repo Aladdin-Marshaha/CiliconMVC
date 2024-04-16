@@ -1,0 +1,40 @@
+.subscribe {
+    margin-bottom: 3rem;
+    .container {
+        background-color: #F3F6FF;
+        padding: 4rem;
+
+        .title {
+            display: flex;
+            padding-bottom: 2rem;
+            column-gap: 2rem;
+        }
+
+        form {
+            .Newsletters-options {
+                display: flex;
+                column-gap: 3rem;
+                padding-bottom: 4rem;
+
+                .options {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    column-gap: 3rem;
+                    row-gap: 0.5rem;
+                }
+            }
+
+            .input-group {
+
+                padding-bottom: 1rem;
+
+                input{
+                    width: 70%;
+                    padding: 1rem;
+                    border: solid 1px;
+                }
+                
+            }
+        }
+    }
+}

@@ -301,6 +301,38 @@ footer .footer-text {
   background-color: #F3F6FF;
 }
 
+.subscribe {
+  margin-bottom: 3rem;
+}
+.subscribe .container {
+  background-color: #F3F6FF;
+  padding: 4rem;
+}
+.subscribe .container .title {
+  display: flex;
+  padding-bottom: 2rem;
+  column-gap: 2rem;
+}
+.subscribe .container form .Newsletters-options {
+  display: flex;
+  column-gap: 3rem;
+  padding-bottom: 4rem;
+}
+.subscribe .container form .Newsletters-options .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+}
+.subscribe .container form .input-group {
+  padding-bottom: 1rem;
+}
+.subscribe .container form .input-group input {
+  width: 70%;
+  padding: 1rem;
+  border: solid 1px;
+}
+
 .signUp {
   display: flex;
   margin-top: 4rem;
