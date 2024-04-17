@@ -1,6 +1,9 @@
 ﻿@using System.ComponentModel.DataAnnotations
 @inject SignInManager<UserEntity> _signInManager
 
+@{
+    var user = await UserManager.GetUserAsync(User);
+}
 
 <!DOCTYPE html>
 <html>
@@ -30,6 +33,10 @@
                     {
                         <a asp-controller="Courses" asp-action="Courses">Courses</a>
                     }
+                    @if (_signInManager.IsSignedIn(User))
+                    {
+                        <a asp-controller="Account" asp-action="Details">My Acount</a>
+                    }
                     <a asp-controller="contact" asp-action="contact">Contact</a>
                 </div>
 
@@ -43,6 +50,7 @@
                     @if (_signInManager.IsSignedIn(User))
                     {
                         <a asp-controller="Auth" asp-action="SignOut" class="btn-gray"><i class="fa-sharp fa-solid fa-arrow-right-from-bracket"></i>Sign Out</a>
+                        <a class="profileImage" asp-action="Details" asp-controller="Account"><img src="~/uploads/@user!.ProfileImage" alt="profile image" /></a>
                     }
                     else
                     {            

@@ -9,15 +9,19 @@ using Microsoft.AspNetCore.Mvc;
 namespace CiliconMVC.Controllers;
 
 [Authorize]
-public class AccountController : Controller
+public class AccountController(UserManager<UserEntity> userManager, AddressService addressService, AccountManager accountManager) : Controller
 {
 
-    private readonly UserManager<UserEntity> _userManager;
-    private readonly AddressService _addressService;
-    public AccountController(UserManager<UserEntity> userManager, AddressService addressService)
+    private readonly UserManager<UserEntity> _userManager = userManager;
+    private readonly AddressService _addressService = addressService;
+    private readonly AccountManager _accountManager = accountManager;
+
+    [HttpPost]
+    public async Task<IActionResult> UploadImage(IFormFile file)
     {
-        _userManager = userManager;
-        _addressService = addressService;
+        var result = await _accountManager.UploadUserProfileImageAsync(User, file);
+
+        return RedirectToAction("Details", "Account");
     }
 
     #region Details

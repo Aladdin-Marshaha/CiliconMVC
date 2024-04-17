@@ -111,3 +111,15 @@ input:checked + .slider:before {
         background-color: $gray-700;
     }
 }
+
+.btn-circle {
+    padding: 1rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    :hover {
+        padding: 1rem;
+        background-color: lightgrey;
+        border-radius: 25px;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+}

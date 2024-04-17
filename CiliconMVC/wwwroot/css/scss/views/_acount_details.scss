@@ -10,6 +10,13 @@
         aside {
             text-align: center;
 
+            .profile-info {
+                img {
+                    width: 200px;
+                    height:200px;
+                    border-radius: 100px;
+                }
+            }
             nav {
                 display: grid;
                 gap: 0.5rem;

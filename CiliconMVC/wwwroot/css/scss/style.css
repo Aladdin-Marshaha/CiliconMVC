@@ -131,6 +131,17 @@ input:checked + .slider:before {
   background-color: #565973;
 }
 
+.btn-circle {
+  padding: 1rem;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.btn-circle :hover {
+  padding: 1rem;
+  background-color: lightgrey;
+  border-radius: 25px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
 a {
   text-decoration: none;
 }
@@ -161,6 +172,11 @@ header .container .right {
   display: flex;
   column-gap: 1.5rem;
   align-items: center;
+}
+header .container .right img {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
 }
 
 footer {
@@ -509,6 +525,11 @@ footer .footer-text {
 }
 .account-detailss #account-details aside {
   text-align: center;
+}
+.account-detailss #account-details aside .profile-info img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
 }
 .account-detailss #account-details aside nav {
   display: grid;

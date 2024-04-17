@@ -29,6 +29,12 @@ header {
             display: flex;
             column-gap: 1.5rem;
             align-items: center;
+
+            img {
+                width: 80px;
+                height: 80px;
+                border-radius: 100px;
+            }
         }
     }
 }
