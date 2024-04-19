@@ -28,4 +28,7 @@ public class CourseRegistrationFormViewModel
 
     [Display(Name = "Author")]
     public string? Author { get; set; }
+
+    [Display(Name = "CourseImage")]
+    public string? CourseImage { get; set; }
 }

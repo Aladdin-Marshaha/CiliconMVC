@@ -673,3 +673,21 @@ footer .footer-text {
 .courses .courseParent .courseChiled {
   display: block;
 }
+.courses .courseParent .courseChiled img {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.courses .courseParent .courseChiled .price {
+  display: flex;
+  column-gap: 0.7rem;
+}
+.courses .courseParent .courseChiled .price .Price {
+  color: #6366F1;
+}
+.courses .courseParent .courseChiled .price .DiscountPrice {
+  color: #EF4444;
+}
+.courses .courseParent .courseChiled .like {
+  display: flex;
+  column-gap: 1rem;
+}

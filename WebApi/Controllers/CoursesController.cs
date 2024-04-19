@@ -52,6 +52,7 @@ public class CoursesController : ControllerBase
                 IsBestseller = form.IsBestseller,
                 LikesInNumbers = form.LikesInNumbers,
                 LikesInProcent = form.LikesInProcent,
+                CourseImage = form.CourseImage,
             };
 
             _context.Courses.Add(courseEntity);

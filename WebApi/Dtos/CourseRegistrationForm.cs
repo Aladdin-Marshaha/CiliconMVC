@@ -13,4 +13,5 @@ public class CourseRegistrationForm
     public string? LikesInNumbers { get; set; }
     public string? LikesInProcent { get; set; }
     public string? Author { get; set; }
+    public string? CourseImage {  get; set; }
 }
